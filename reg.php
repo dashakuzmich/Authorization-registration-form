@@ -6,9 +6,8 @@
         header('Location: profile.php');
     }
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,28 +16,31 @@
     <title>Регистрация</title>
 </head>
 <body>
-    <form>
-        <label>Логин</label>
-        <input type="text" name="login" id="login" placeholder="Введите логин"><br>
-        <label>Пароль</label>
-        <input type="password" name="pass" id="pass" placeholder="Введите пароль"><br>
-        <label>Подтверждение пароля</label>
-        <input type="password" name="password_confirm" placeholder="Подтвердите пароль"><br>
-        <label>Почта</label>
-        <input type="email" name="email" id="email" placeholder="Введите e-mail"><br>
-        <label>Имя</label>
-        <input type="text" name="username" id="username" placeholder="Введите имя"><br>
-        <button class="btn_reg" type="submit">Регистрация</button>
+    <main>
+        <div class="container">
+            <div class="wrapper">
+                <div class="title">
+                    <h1>Регистрация</h1>
+                </div>
+                <div class="form-reg form">
+                    <form>
+                    <input type="text" name="login" id="login" placeholder="Логин"><br>
+                    <input type="password" name="pass" id="pass" placeholder="Пароль"><br>
+                    <input type="password" name="password_confirm" id="password_confirm" placeholder="Подтвердите пароль"><br>
+                    <input type="email" name="email" id="email" placeholder="Почта"><br>
+                    <input type="text" name="username" id="username" placeholder="Имя"><br>
+                    <button class="btn-reg btn" type="submit">Регистрация</button>
+                    <p>
+                        У вас уже есть аккаунт? - <a href="index.php">Авторизуйтесь!</a>
+                    </p>
+                    <p class="msg none"></p>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </main>    
 
-        <p>
-            У вас есть аккаунт? - <a href="auth.php">Авторизируйтесь</a>!
-        </p>
-        <p class="msg none"></p>
-     
-    </form>  
-
-<script src="js/jquery.js"></script>
-<script src="js/main.js"></script>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

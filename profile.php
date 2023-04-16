@@ -16,9 +16,19 @@
     <title>Профиль</title>
 </head>
 <body>
-    <form>
-        <h1><?= $_SESSION['user']['username'] ?>, hello!</h1>
-        <p><a href="vendor/logout.php" class="logout">Выход</a></p>
-    </form>
+    <main>
+        <div class="container">
+            <div class="wrapper">
+                <div class="title">
+                    <h1>Привет!, <?=$_SESSION['user']['username'] ?></h1>
+                </div>
+                <div class="form-auth form">
+                    <form>
+                        <p><a href="vendor/logout.php" class="btn-out btn">Выход</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

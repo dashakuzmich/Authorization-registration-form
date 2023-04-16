@@ -47,7 +47,7 @@
         $response = [
             "status" => false,
             "type" => 1,
-            "message" => "Проверьте правильность заполнения полей",
+            "message" => "Заполните все поля",
             "fields" => $error_fields
         ];
 
@@ -91,12 +91,12 @@
         die();
     }
     
-    if (!preg_match("/^[a-zA-Zа-яА-Я]{2,2}$/",$username))
+    if (mb_strlen($username) < 2)
     {
         $response = [
             "status" => false,
             "type" => 1,
-            "message" => "Имя может состоять только из двух букв",
+            "message" => "Имя может состоять минимально из 2 букв",
             "fields" => ['username']
         ];
         echo json_encode($response); 
@@ -117,7 +117,9 @@
     {
        $response = [
            "status" => false,
+           "type" => 1,
            "message" => "Пароли не совпадают",
+           "fields" => ['pass', 'password_confirm'],
        ];
        echo json_encode($response);
     }

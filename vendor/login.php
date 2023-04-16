@@ -19,13 +19,14 @@
         $response = [
             "status" => false,
             "type" => 1,
-            "message" => "Проверьте правильность полей",
-            "fields" => $error_fields
+            "message" => "Заполните все поля",
+            "fields" => ['login', 'pass']
         ];
 
         echo json_encode($response);
         die();
     }
+
     $pass = md5($pass);
 
     $check = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$pass'");
@@ -47,7 +48,9 @@
     {
         $response = [
             "status" => false,
-            "message" => 'Не верный логин или пароль'
+            "type" => 1,
+            "message" => 'Не верный логин или пароль',
+            "fields" => ['login', 'pass']
         ];
 
         echo json_encode($response);
