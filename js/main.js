@@ -1,6 +1,6 @@
 /* Авторизация */
 
-$('.btn_auth').click(function (e) 
+$('.btn-auth').click(function (e) 
 {
     e.preventDefault();
 
@@ -33,7 +33,7 @@ $('.btn_auth').click(function (e)
     });
 });
 
-$('.btn_reg').click(function (e) 
+$('.btn-reg').click(function (e) 
 {
     e.preventDefault();
 
@@ -58,7 +58,7 @@ $('.btn_reg').click(function (e)
         },
         success (data) {
             if (data.status) {
-                document.location.href = 'index.html';
+                document.location.href = 'index.php';
             } else 
             {
                 if (data.type === 1) {
