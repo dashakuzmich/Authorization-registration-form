@@ -1,61 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-* {
-    margin: 0px;
-    padding: 0px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body {
+.container {
     height: 100vh;
-    font-family: Montserrat, sans-serif;
+    padding: 0 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background: url(../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Montserrat;
+    color: white;
 }
-a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-a:hover {
-    color: rgb(88, 84, 146);
-}
-
-form {
+.wrapper {
     display: flex;
-    flex-direction: column;
-    width: 400px;
+    justify-content: center;
+    align-items: center;
 }
-input {
+@media screen and (max-width: 767px) {
+    .wrapper {
+        display: block;
+    }
+}
+@media screen and (max-width: 567px) {
+    .wrapper {
+        display: block;
+    }
+}
+.title h1 {
+    max-width: 220px;
+    text-align: center;
+    margin: 30px 50px;
+}
+.form {
+    padding:  50px 40px;
+    background-color: rgba(255, 255, 255, 0.265);
+}
+@media screen and (max-width: 567px) {
+    .form {
+        padding:  40px 30px;
+    }
+}
+.form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+    border: unset;
+    border-bottom: 2px solid white;
+    outline: none;
+    background-color: transparent;
+    justify-content: center;
+    color: white;
+    font-family: Montserrat;
+}
+.form input::-webkit-input-placeholder {
+    color: white;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+.btn {
+    width: 100%;
     margin: 10px 0;
     padding: 10px;
-    border: unset;
-    border-bottom: 2px solid #e3e3e3;
-    outline: none;
-    font-family: Montserrat, sans-serif;
-}
-button {
-    padding: 10px;
-    background: #e3e3e3;
-    border: unset;
+    font-family: Montserrat;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
     cursor: pointer;
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 5px;
 }
-
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.265);
+    transition: all 0.3s ease-in-out;
+}
+.form a, .form p{
+    max-width: 340px;
+    text-align: center;
+    color: white;
+}
+.form a:hover {
+    color: rgb(255, 0, 111);
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
 .msg {
-    color: red;
+    max-width: 340px;
+    color: red !important;
+    padding-top: 10px;
 } 
 .none {
     display: none;
 }
-h1 {
-    margin: 10px 0;
-}
-p {
-    margin: 5px 0;
-}
 .error {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid red !important;
 }
-
-
